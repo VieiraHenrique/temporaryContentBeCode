@@ -56,3 +56,32 @@ Great ! Now :
 - In your inspector, play with the responsiveness. Select different screen sizes and see the result. Play with the "responsive" GUI to increase and decrease the width of the viewport.
 
 MAGIC ! The content changes relative to the viewport width !
+
+---
+
+Let's do another one :
+
+- In a new project (index.html and styles.css)
+- Create a container to center the content in the page
+- Inside of it, create a flex container and inside 6 divs.
+- Give each div a width of 100% (it will take the maximum available space) and a height of 100px
+- Give each div a different background color.
+- Look at it in a laptop view (1440)
+- In the inspector, play with the responsiveness.
+- Look how small they get in a mobile size !!!!
+- Let's stack them ! Use a media query to give the flex container a column direction on mobile and row direction on a bigger scree.
+- TIP : Even tough we can use `max-width` in the media query, the highly recommended worflow is **mobile-first** ! So declare your css for mobile and then with media query use `min-width`.
+
+---
+
+Looks great ?
+Let's change the code in order to use GRID now :
+
+- Instead of a `display: flex `, use now a display grid.
+- Give the template columns two `1fr`
+- For tablet give three `1fr`
+- For laptops give six `1fr` (think of the function `repeat`)
+
+**Congratulations ! Give yourself a hug !**
+
+![](https://media.giphy.com/media/u04bOWYPdInzmZCOqR/giphy.gif)
