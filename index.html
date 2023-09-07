@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: gold;
+      }
+
+      h1 {
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 50px;
+      }
+
+      .b,
+      .c,
+      .d,
+      .e {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        body {
+          background-color: pink;
+        }
+
+        .b {
+          display: block;
+        }
+
+        .a,
+        .c,
+        .d,
+        .e {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        body {
+          background-color: chocolate;
+        }
+        .c {
+          display: block;
+        }
+
+        .a,
+        .b,
+        .d,
+        .e {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        body {
+          background-color: cadetblue;
+        }
+        .d {
+          display: block;
+        }
+
+        .a,
+        .c,
+        .b,
+        .e {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1920px) {
+        body {
+          background-color: cornflowerblue;
+        }
+        .e {
+          display: block;
+        }
+
+        .a,
+        .c,
+        .d,
+        .b {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>I am on a :</h1>
+    <hr />
+    <h2 class="a">Mobile</h2>
+    <h2 class="b">Tablet</h2>
+    <h2 class="c">Laptop 13 inches</h2>
+    <h2 class="d">Laptop</h2>
+    <h2 class="e">Desktop</h2>
+  </body>
+</html>
