@@ -50,3 +50,9 @@ Instructions :
 - From 1440px (laptop) : background : `cadetblue` and only the h2 `Laptop` should apppear.
 
 - From 1920px (desktop) : background : `cornflowerblue` and only the h2 `Desktop` should apppear.
+
+Great ! Now :
+
+- In your inspector, play with the responsiveness. Select different screen sizes and see the result. Play with the "responsive" GUI to increase and decrease the width of the viewport.
+
+MAGIC ! The content changes relative to the viewport width !
