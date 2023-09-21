@@ -31,7 +31,7 @@ alert(
 
 /* EXERCISE WEEK4 - 20 */
 
-/* window.onload = () => {
+window.onload = () => {
   let input = prompt("What do you want to do ?");
 
   const todos = [];
@@ -59,10 +59,9 @@ alert(
         prompt("What to do would you like to delete (only numbers accepted)")
       );
       if (!deleteTodoIndex) {
-        deleteTodoIndex = parseInt(
-          prompt(
-            "Please enter a valid number. What to do would you like to delete ?"
-          )
+        deleteTodoIndex = parseInt();
+        prompt(
+          "Please enter a valid number. What to do would you like to delete ?"
         );
       } else {
         if (todos[deleteTodoIndex - 1]) {
@@ -83,4 +82,7 @@ alert(
     }
   }
 };
- */
+
+//
+
+array && array.splice();
