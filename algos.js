@@ -145,7 +145,7 @@ console.log(calculateFuel(15));
 console.log(calculateFuel(23.5));
 console.log(calculateFuel(3)); */
 
-/* 01.ALGOS-serie2 */
+/* 02.ALGOS-serie2 */
 
 // 00.exo /////////////////////////////////////////
 
@@ -312,7 +312,7 @@ console.log(reverseWords(" the sky is blue"));
 console.log(reverseWords("hello   world!  "));
 console.log(reverseWords("a good example")); */
 
-/* 01.ALGOS-serie3 */
+/* 03.ALGOS-serie3 */
 
 // 00.exo /////////////////////////////////////////
 
@@ -470,7 +470,7 @@ console.log(findBrokenKeys("happy birthday", "hawwy birthday"));
 console.log(findBrokenKeys("starry night", "starrq light"));
 console.log(findBrokenKeys("beethoven", "affthoif5")); */
 
-/* 01.ALGOS-advanced */
+/* 04.ALGOS-advanced */
 
 // 00.exo /////////////////////////////////////////
 
@@ -505,12 +505,22 @@ const ransomNote = (noteText, magazineText) => {
     return obj;
   }, {});
 
-  for (let i = 0; i < noteText.length; i++) {}
+  for (let i = 0; i < noteText.length; i++) {
+    if (!Object.keys(hash).includes(noteText[i])) {
+      return false;
+    } else if (!hash[noteText[i]]) {
+      return false;
+    } else {
+      hash[noteText[i]]--;
+    }
+  }
 
-  console.log(hash);
+  return true;
 };
 
-ransomNote(
-  "this is a secret note to you from a secret admirer",
-  "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"
+console.log(
+  ransomNote(
+    "this is a note to you from a secret admirer",
+    "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"
+  )
 );
