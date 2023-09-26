@@ -71,5 +71,3 @@ console.log(
 console.log(isPalindrome("Madam, I'm Adam")); */
 
 // 03.exo /////////////////////////////////////////
-
-document.querySelector;
