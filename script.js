@@ -1,3 +1,4 @@
-const block = document.querySelector(".block");
+const bold = document.querySelector("b");
 
-console.log(block.dataset);
+bold.parentElement.parentElement.parentElement.parentElement.style.backgroundColor =
+  "beige";
