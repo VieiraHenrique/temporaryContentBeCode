@@ -1,4 +1,13 @@
-const bold = document.querySelector("b");
+const btns = document.querySelectorAll("button");
 
-bold.parentElement.parentElement.parentElement.parentElement.style.backgroundColor =
-  "beige";
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const parag = btn.nextElementSibling;
+    parag.classList.toggle("hidden");
+    if (parag.classList.contains("hidden")) {
+      btn.innerText = "Open text";
+    } else {
+      btn.innerText = "Close text";
+    }
+  });
+});
