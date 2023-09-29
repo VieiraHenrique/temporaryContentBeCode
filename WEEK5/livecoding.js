@@ -1,24 +1,4 @@
-/* 04.ALGOS-advanced */
-
-// 00.exo /////////////////////////////////////////
-
-/* const fizzBuzz = (num) => {
-  for (let i = 1; i <= num; i++) {
-    if (i % 15 === 0) {
-      console.log("fizzBuzz");
-    } else if (i % 3 === 0) {
-      console.log("Fizz");
-    } else if (i % 3 === 0) {
-      console.log("Buzz");
-    } else {
-      console.log(i);
-    }
-  }
-};
-
-fizzBuzz(20); */
-
-// 01.exo /////////////////////////////////////////
+// ADVANCED 01.exo /////////////////////////////////////////
 
 /* const ransomNote = (noteText, magazineText) => {
   magazineText = magazineText.split(" ");
@@ -52,29 +32,6 @@ console.log(
     "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"
   )
 ); */
-
-// 02.exo /////////////////////////////////////////
-
-/* const isPalindrome = (str) => {
-  arr = str.trim().toLowerCase().replace(" ", "").split("");
-  const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-
-  arr = arr.filter((el, i) => {
-    return alphabet.includes(el);
-  });
-
-  const arr2 = [...arr].reverse();
-
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-console.log(isPalindrome("Madam, I'm Adam")); */
 
 // 03.exo /////////////////////////////////////////
 
