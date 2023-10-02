@@ -11,6 +11,10 @@ const formData = {
   passwordCheck: "",
 };
 
+/* show error / success */
+
+const showError = (input, msg) => {};
+
 /* Prevent submit and perform tests */
 
 registerForm.addEventListener("submit", (e) => {
