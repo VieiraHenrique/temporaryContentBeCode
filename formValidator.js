@@ -11,8 +11,6 @@ const formData = {
   passwordCheck: "",
 };
 
-/* SHOW MSG */
-
 const showError = (input, msg) => {
   input.parentElement.classList = "form-entry error";
   input.parentElement.querySelector(".msg").innerText = msg;
