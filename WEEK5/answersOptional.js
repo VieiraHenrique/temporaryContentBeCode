@@ -52,3 +52,26 @@ onlyPositives = (arr) => arr.reduce((sum, el) => (el > 0 ? sum + el : sum), 0);
 console.log(onlyPositives([1, 6, 2, -3, 5, -12]));
 
 console.log(onlyPositives([-3, -4, -2]));
+
+/* 10. */
+
+const scanAndFind = (data, source) =>
+  data.filter(
+    (el) =>
+      el.hasOwnProperty(Object.keys(source)[0]) &&
+      el[Object.keys(source)[0]] === source[Object.keys(source)[0]]
+  );
+
+console.log(
+  scanAndFind(
+    [
+      { fullName: "Roi Baudoin", id: 49762 },
+      { fullName: "Margareth Tatcher", id: 94357 },
+      { fullName: "Barack Obama", id: 76458 },
+      { fullName: "Emmanuel Macron", id: 10687 },
+      { fullName: "Charles de Gaulle", id: 67098 },
+      { fullName: "Boris Johnson", id: 16437 },
+    ],
+    { id: 10687 }
+  )
+);

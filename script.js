@@ -11,91 +11,80 @@ const formData = {
   passwordCheck: "",
 };
 
-/* show error / success */
+/* SHOW MSG */
 
-const showError = (input, msg) => {};
+const showError = (input, msg) => {
+  input.parentElement.classList = "form-entry error";
+  input.parentElement.querySelector(".msg").innerText = msg;
+};
 
-/* Prevent submit and perform tests */
+const showSuccess = (input) => {
+  input.parentElement.classList = "form-entry success";
+  input.parentElement.querySelector(".msg").innerText = "Message";
+};
 
 registerForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (isFormValid()) {
-    console.log(formData);
+
+  if (usernameInput.value.length < 5 || usernameInput.value.length > 8) {
+    showError(usernameInput, "Must be between 5 and 8 characters");
   } else {
-    console.log("Error");
+    showSuccess(usernameInput);
+  }
+
+  if (
+    !emailInput.value.match(
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    )
+  ) {
+    showError(emailInput, "Not a valid email address");
+  } else {
+    showSuccess(emailInput);
+  }
+
+  if (passwordInput.value.length < 8 || passwordInput.value.length > 15) {
+    showError(passwordInput, "Must be between 8 and 15 characters");
+  } else {
+    showSuccess(passwordInput);
+  }
+
+  if (
+    password2Input.value !== passwordInput.value ||
+    !password2Input.value.length
+  ) {
+    showError(password2Input, "Passwords don't match");
+  } else {
+    showSuccess(password2Input);
+  }
+
+  const formControls = Array.from(document.querySelectorAll(".form-entry"));
+
+  let isValidForm = true;
+
+  formControls.forEach((el) => {
+    if (el.classList.contains("error")) {
+      isValidForm = false;
+    }
+  });
+
+  if (isValidForm) {
+    console.log(formData);
   }
 });
-
-/* Bind formData to the data entered */
 
 document.addEventListener("change", (e) => {
-  if (e.target.matches("#username")) {
-    formData.username = e.target.value;
+  const value = e.target.value;
+
+  if (e.target === usernameInput) {
+    formData.username = value;
   }
-  if (e.target.matches("#email")) {
-    formData.email = e.target.value;
+  if (e.target === emailInput) {
+    formData.email = value;
   }
-  if (e.target.matches("#password")) {
-    formData.password = e.target.value;
+  if (e.target === passwordInput) {
+    formData.password = value;
   }
-  if (e.target.matches("#password2")) {
-    formData.passwordCheck = e.target.value;
+  if (e.target === password2Input) {
+    formData.passwordCheck = value;
   }
 });
-
-/* Functions of validation */
-
-const isFilled = (arrOfFields) => {
-  for (let i = 0; i < arrOfFields.length; i++) {
-    if (!arrOfFields[i].value) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const isEmail = (arrOfFields) => {
-  for (let i = 0; i < arrOfFields.length; i++) {
-    if (
-      !arrOfFields[i].value.match(
-        /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/
-      )
-    ) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const areTheSame = (field1, field2) => {
-  if (field1.value !== field2.value) {
-    return false;
-  }
-  return true;
-};
-
-const isMinMaxOK = (arrOfFields, min, max) => {
-  for (let i = 0; i < arrOfFields.length; i++) {
-    if (
-      arrOfFields[i].value.length < min ||
-      arrOfFields[i].value.length > max
-    ) {
-      return false;
-    }
-  }
-  return true;
-};
-
-/* Check if it is valid */
-
-const isFormValid = () => {
-  if (
-    !isFilled([usernameInput, emailInput, passwordInput, password2Input]) ||
-    !isEmail([emailInput]) ||
-    !areTheSame(passwordInput, password2Input) ||
-    !isMinMaxOK([usernameInput, passwordInput], 5, 10)
-  ) {
-    return false;
-  }
-  return true;
-};
