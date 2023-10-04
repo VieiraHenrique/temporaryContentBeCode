@@ -4,6 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      form {
+        padding: 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        min-width: 400px;
+      }
+
+      h1 {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .form-control {
+        margin-bottom: 5px;
+      }
+
+      label {
+        display: block;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        outline: none;
+      }
+
+      .msg {
+        opacity: 0;
+      }
+
+      button {
+        background-color: #2b52ff;
+        border: none;
+        color: white;
+        padding: 12px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .error input {
+        border: 2px solid red;
+      }
+
+      .error .msg {
+        color: red;
+        opacity: 1;
+      }
+
+      .success input {
+        border: 2px solid rgb(14, 189, 14);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <form>
+      <h1>Register here</h1>
+      <div class="form-control">
+        <label for="username"> Username </label>
+        <input type="text" id="username" />
+        <small class="msg">Message</small>
+      </div>
+      <div class="form-control">
+        <label for="email"> Email </label>
+        <input type="text" id="email" />
+        <small class="msg">Message</small>
+      </div>
+      <div class="form-control">
+        <label for="password"> Password </label>
+        <input type="text" id="password" />
+        <small class="msg">Message</small>
+      </div>
+      <div class="form-control">
+        <label for="password2"> Repeat password </label>
+        <input type="text" id="password2" />
+        <small class="msg">Message</small>
+      </div>
+      <button>Register</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
 </html>
