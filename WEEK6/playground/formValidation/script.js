@@ -121,8 +121,8 @@ const checkEmail = (input) => {
 };
 
 const checkMatch = (input1, input2) => {
-  if (input1.value !== input2.value) {
-    showError(`Password don't match`);
+  if (input1.value !== input2.value || !input1.value.length) {
+    showError(input2, `Password don't match`);
   } else {
     showSuccess(input2);
   }
@@ -144,4 +144,12 @@ form.addEventListener("submit", (e) => {
   checkEmail(email);
 
   checkMatch(password, password2);
+
+  if (!errors.length) {
+    console.log({
+      username: username.value,
+      email: email.value,
+      password: password.value,
+    });
+  }
 });

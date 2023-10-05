@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO LIST</title>
+
+    <style>
+      input:disabled {
+        background-color: transparent;
+        border: none;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TODO LIST</h1>
+
+    <div>
+      <input type="text" placeholder="Add todo" id="main-input" />
+      <button id="addBtn">add</button>
+    </div>
+
+    <ul class="todos-container">
+      <!-- <li>
+        <input type="text" disabled value="todo1" />
+        <button>edit</button>
+        <button>delete</button>
+      </li> -->
+    </ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>
