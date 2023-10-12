@@ -1,7 +1,17 @@
-const fetchData = async () => {
-  const res = await fetch("https://catfact.ninja/fact");
-  const data = await res.json();
-  console.log(data);
+const generateBG = (color, delay) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = color;
+      resolve();
+    }, delay);
+  });
 };
 
-fetchData();
+const rainbow = async () => {
+  await generateBG("blue", 1000);
+  await generateBG("red", 1000);
+  await generateBG("yellow", 1000);
+  await generateBG("purple", 1000);
+};
+
+rainbow();
