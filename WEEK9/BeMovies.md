@@ -4,7 +4,7 @@
 
 **Helloooooowww !!!!**
 
-How are you my friends ? Hope you're doing well and are excited for this new week !
+How are you my friends ? Hope you're doing well and that you are excited for this new week !
 
 We will be creating an app about movies ! In it, we will be able to see the latest releases, see them by genre, and search for any movie we want. We will be able to click on a movie and have some info about it, like :
 
@@ -35,11 +35,26 @@ This requires a good coordination between the duo to set how the html, css and j
 
 - Before starting, analyze very carefully the project, all its requirements... do some tests together with postman and coordinate yourselves on how the html/css should look like in order to facilitate its JS integration.
 
-- Each time an html and/or css should be changed, head over to your partner so HE/HER changes it.
+- Each time an html and/or css should be changed, head over to your partner so **HE/HER changes it**.
 
 - Work with branches, merge them, etc.
 
 - Why not use a trello and a SCRUM methodology ?
+
+---
+
+Here are the groups :
+
+1. Elodie / Irina
+2. Fabrice / Ismail
+3. Hugo / Loukas
+4. Antonino / Quentin
+5. Sola / Naike
+6. Mateo / Jerome
+7. Julia / Stijn
+8. Romeo / Benoit
+9. Eli / Colas
+10. John / Maryna
 
 ---
 
@@ -64,5 +79,3 @@ There are many and many endpoints in this API. You will be using only a few of t
 ---
 
 The REGISTER / LOGIN popup is only for practice ! No need to login or sign up for real. Just log to the console an object with the data after submitting.
-
----
