@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="text" id="password" />
+      </div>
+      <button type="submit">Create user</button>
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      const userNameInput = document.querySelector("#username");
+      const passwordInput = document.querySelector("#password");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const enteredUsername = userNameInput.value;
+        const enteredPassword = passwordInput.value;
+
+        if (enteredUsername.trim().length === 0) {
+          alert(`Username can't be empty`);
+          return;
+        }
+
+        if (enteredPassword.trim().length === 0) {
+          alert(`Password can't be empty`);
+          return;
+        }
+
+        const user = {
+          username: enteredUsername,
+          password: enteredPassword,
+        };
+
+        console.log(user);
+      });
+    </script>
+  </body>
+</html>

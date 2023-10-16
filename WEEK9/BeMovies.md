@@ -22,7 +22,7 @@ You can find the design [here](https://www.figma.com/file/jT6U3cABdKEUDRVTUJSbQd
 
 **ALSO :**
 
-This will be the first "group" exercise we have. You will do it in duo, by groups of two.
+This will be the first "group" exercise we have. You will do it in duo (so... by groups of two).
 
 The idea is :
 
