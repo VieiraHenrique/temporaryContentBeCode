@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Finder</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 50px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .meals-list {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 50px;
+      }
+
+      .entry b {
+        display: block;
+        text-align: center;
+      }
+
+      .entry img {
+        cursor: pointer;
+      }
+
+      .modal {
+        padding: 50px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #eaeaea;
+        overflow-y: scroll;
+      }
+
+      .modal img {
+        height: 25vh;
+        object-fit: cover;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .modal-desc {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="search-bar">
+      <input type="text" id="search" placeholder="Search for a meal" />
+      <button>Search</button>
+    </form>
+
+    <hr />
+    <template>
+      <img src="" alt="Title" />
+      <b class="title">Title</b>
+    </template>
+
+    <div class="meals-list"></div>
+
+    <div class="modal hidden">
+      <button>Go Back</button>
+      <img src="" alt="" />
+      <h1 class="modal-title">Title</h1>
+      <h3><span class="modal-country">Country</span> food</h3>
+      <p class="modal-desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, optio
+        modi quasi expedita repudiandae voluptate.
+      </p>
+      <br />
+      <h3>Ingredients</h3>
+      <ul></ul>
+    </div>
+
+    <template class="ingredient-template">
+      <span class="ingredient">ingredient</span>
+      -
+      <span class="ingredient-amount">amount</span>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
